@@ -1,16 +1,15 @@
 package com.example.android.quakereport;
 
-import java.util.Date;
-
 public class Earthquake {
-    String mag;
-    String place;
-    String date;
+    private String mag;
+    private String place;
+    /** Time of the earthquake */
+    private long mTimeInMilliseconds;
 
-    public Earthquake(String mag, String place, String date) {
+    public Earthquake(String mag, String place, long mTimeInMilliseconds) {
         this.mag = mag;
         this.place = place;
-        this.date = date;
+        this.mTimeInMilliseconds = mTimeInMilliseconds;
     }
 
     public String getMag() {
@@ -21,7 +20,10 @@ public class Earthquake {
         return place;
     }
 
-    public String getDate() {
-        return date;
+    /**
+     * Returns the time of the earthquake.
+     */
+    public long getmTimeInMilliseconds() {
+        return mTimeInMilliseconds;
     }
 }
